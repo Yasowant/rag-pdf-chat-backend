@@ -5,7 +5,7 @@ from app.config import QDRANT_URL, QDRANT_API_KEY, REDIS_URL
 import redis
 import uuid
 
-# OpenAI client
+# OpenAI client Open
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Qdrant client
