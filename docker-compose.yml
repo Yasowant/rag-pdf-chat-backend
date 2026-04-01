@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+
+  app:
+    build: .
+    container_name: rag_app
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - QDRANT_URL=${QDRANT_URL}
+      - QDRANT_API_KEY=${QDRANT_API_KEY}
+      - REDIS_URL=${REDIS_URL}
+    volumes:
+      - .:/app
+    restart: always
